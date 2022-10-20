@@ -1,0 +1,17 @@
+pip3 install click==8.1.3
+pip3 install colorama==0.4.5
+pip3 install Flask==2.2.2
+pip3 install Flask-SQLAlchemy==3.0.2
+pip3 install getenv==0.2.0
+pip3 install greenlet==1.1.3.post0
+pip3 install gunicorn==20.1.0
+pip3 install importlib-metadata==5.0.0
+pip3 install itsdangerous==2.1.2
+pip3 install Jinja2==3.1.2
+pip3 install MarkupSafe==2.1.1
+pip3 install psycopg2==2.9.4
+pip3 install python-dotenv==0.21.0
+pip3 install SQLAlchemy==1.4.42
+pip3 install SQLAlchemy-Utils==0.38.3
+pip3 install Werkzeug==2.2.2
+pip3 install zipp==3.9.0
