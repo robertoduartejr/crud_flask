@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 
 app=Flask(__name__)
+
 app.app_context().push() #chamada para evitar working outside of application context
 
 load_dotenv() #carregando informações do arquivo env
