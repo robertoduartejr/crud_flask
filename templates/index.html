@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{%block content %}
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Time</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+            {%for torcedor in torcedores %}
+            <tr>
+                <td>{{torcedor.nome}}</td>
+                <td>{{torcedor.cpf}}</td>
+                <td>{{torcedor.time}}</td>
+                <td>
+                    <a class="btn btn-outline-primary" href="/editar/{{torcedor.id}}">Editar</a> 
+                    <a class="btn btn-outline-danger" href="/deletar/{{torcedor.id}}" onclick="return confirm('Tem certeza que deseja deletar esse registo?');">Deletar</a>
+                </td>
+            </tr>
+            {%endfor %}
+        </tbody>
+    </table>
+</div>
+{%endblock content %}

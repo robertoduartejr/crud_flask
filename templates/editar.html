@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{%block content %}
+
+
+<h2 style="text-align: center;"> Editar Informações - {{torcedor.nome}}</h1>
+
+    <div>
+        <form action="/editar/{{torcedor.id}}" class="container" method="post">
+            <div class="row">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nome Completo</label>
+                    <input class="form-control" type="text" name="nome" id="Nome" placeholder="Fulano da Silva" value={{torcedor.nome}}>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput2" class="form-label">Data de Nascimento</label>
+                    <input class="form-control" type="date" class="form-control" name="data_de_nascimento" id="data_de_nascimento" placeholder="Data de Nascimento" value={{torcedor.data_nascimento}}>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput3" class="form-label">Time do Coração</label>
+                    <select class="form-select" id="time" name="time">
+                        <option selected>{{torcedor.time}}</option>
+                        <option value ="vasco">vasco</option>
+                        <option value ="flamengo">flamengo</option>
+                        <option value ="botafogo">botafogo</option>
+                        <option value ="fluminense">fluminense</option>
+                        <option value ="palmeiras">palmeiras</option>
+                        <option value ="corinthians">corinthians</option>
+                        <option value ="são paulo">são Paulo</option>
+                        <option value ="santos">santos</option>
+                        <option value ="cruzeiro">cruzeiro</option>
+                        <option value ="atletico mg">atlético Mg</option>
+                        <option value ="palmeiras">palmeiras</option>
+                        <option value ="corinthians">corinthians</option>
+                        <option value ="são paulo">são paulo</option>
+                        <option value ="santos">santos</option>
+                        <option value ="santos">outro</option>
+                        </select> 
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput4" class="form-label">Email</label>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="exemplo@exemplo.com" value={{torcedor.email}}>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput5" class="form-label">CPF</label>
+                    <input class="form-control" type="text" value={{torcedor.cpf}} name="cpf" id="cpf" placeholder="000.000.000-00" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse"></span>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary mb-3">Adicionar</button>
+            </div>
+        </form>
+    </div>
+
+{%endblock content %}
