@@ -4,7 +4,7 @@ import app
 from models import Torcedor
 import views
 
-#criar tudo no banco, caso não tenha sido criado
+#criar tudo no banco, caso não tenha sido criado..
 
 #rodar aplicação
 if __name__ == '__main__':
