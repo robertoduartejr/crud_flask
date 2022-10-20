@@ -19,3 +19,5 @@ db_database = os.getenv("DB_DATABASE")
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{db_username}:{db_password}@{db_host}/{db_database}'
 db = SQLAlchemy(app)
 
+
+

@@ -3,11 +3,12 @@
 import app
 from models import Torcedor
 import views
+from app import app, db
 
 #criar tudo no banco, caso não tenha sido criado..
 
 #rodar aplicação
 if __name__ == '__main__':
-    app.db.create_all()
-    app.app.run(debug=True)
+    db.create_all()
+    app.run(debug=True)
 
